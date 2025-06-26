@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Красота</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background:red;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: white;
+      margin-bottom: 20px;
+    }
+    .tabs {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 30px;
+    }
+    .tabs button {
+      padding: 10px 20px;
+      background: white;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: bold;
+      color: black;
+    }
+    .tabs button.active {
+      background: black;
+      color: white;
+    }
+    .section {
+      display: none;
+    }
+    .section.active {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(600px, 0fr));
+      gap: 20px;
+    }
+    .card {
+      background: #ffffff;
+      border-radius: 14px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.06);
+      padding: 15px;
+      transition: transform 0.2s;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+    }
+    .card img {
+      width: 100%;
+      height: 700px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    .card h3 {
+      font-size: 16px;
+      margin: 10px 0 5px;
+      color: #333;
+    }
+    .price {
+      font-weight: bold;
+      color: #d81b60;
+      font-size: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Красота</h1>
+
+  <div class="tabs">
+    <button class="tab-btn active" data-tab="cosmetics">Косметика</button>
+    <button class="tab-btn" data-tab="body">Уход за телом</button>
+    <button class="tab-btn" data-tab="slim">Похудение</button>
+  
+    <button class="tab-btn" data-tab="other">Другое</button>
+  </div>
+
+  <!-- Косметика -->
+  <div class="section active" id="cosmetics">
+    <div class="card">
+      <img src="крем.jpg" alt="Тональный крем">
+      <h3>Тональный крем Perfect Skin</h3>
+      <p class="price">850сом</p>
+    </div>
+    <div class="card">
+      <img src="Тушь.jpg" alt="Тушь">
+      <h3>Тушь Volume Max</h3>
+      <p class="price">590сом</p>
+    </div>
+	<div class="card">
+      <img src="помада.jpeg" alt="Тушь">
+      <h3>Помада Faberlic</h3>
+      <p class="price">190сом</p>
+    </div>
+  </div>
+
+  <!-- Уход за телом -->
+  <div class="section" id="body">
+    <div class="card">
+      <img src="гель алое.jpg" alt="Крем">
+      <h3>Крем с аргановым маслом</h3>
+      <p class="price">720сом</p>
+    </div>
+    <div class="card">
+      <img src="крем2.jpg" alt="Скраб">
+      <h3>Скраб с морской солью</h3>
+      <p class="price">460сом</p>
+    </div>
+	 <div class="card">
+      <img src="Крем увлажняющий.jpeg" alt="Скраб">
+      <h3>Крем увлажняющий</h3>
+      <p class="price">560сом</p>
+    </div>
+  </div>
+
+  <!-- Похудение -->
+  <div class="section" id="slim">
+    <div class="card">
+      <img src="гель красота.jpg" alt="Гель">
+      <h3>Липолитический гель</h3>
+      <p class="price">990сом</p>
+    </div>
+    <div class="card">
+      <img src="чай травяной.jpg" alt="Чай">
+      <h3>Травяной чай Detox</h3>
+      <p class="price">540сом</p>
+    </div>
+	<div class="card">
+      <img src="худение.jpeg" alt="Чай">
+      <h3>продукты для похудения</h3>
+      <p class="price">500сом</p>
+    </div>
+  </div>
+
+  <!-- Парфюмерия -->
+  <div class="section" id="perfume">
+    <div class="card">
+      <img src=".jpg" alt="Парфюм">
+      <h3>Blossom Night 30 мл</h3>
+      <p class="price">1 200сом</p>
+    </div>
+  </div>
+
+  <!-- Другое -->
+  <div class="section" id="other">
+    <div class="card">
+      <img src="набор7 1.jpg" alt="Набор">
+      <h3>Маникюрный набор 7 в 1</h3>
+      <p class="price">990сом</p>
+    </div>
+	 <div class="card">
+      <img src="ободок.jpeg" alt="Набор">
+      <h3>Набор 6 в 1</h3>
+      <p class="price">490сом</p>
+    </div>
+	 <div class="card">
+      <img src="расческа.jpeg" alt="Набор">
+      <h3>Расческа</h3>
+      <p class="price">190сом</p>
+    </div>
+  </div>
+
+  <script>
+    const tabs = document.querySelectorAll('.tab-btn');
+    const sections = document.querySelectorAll('.section');
+
+    tabs.forEach(btn => {
+      btn.addEventListener('click', () => {
+        tabs.forEach(b => b.classList.remove('active'));
+        sections.forEach(s => s.classList.remove('active'));
+
+        btn.classList.add('active');
+        document.getElementById(btn.dataset.tab).classList.add('active');
+      });
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Парфюмерия</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: red;
+      padding: 20px;
+      margin: 0;
+    }
+
+    h1 {
+      text-align: center;
+      color: white;
+      margin-bottom: 20px;
+    }
+
+    .tabs {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 30px;
+    }
+
+    .tabs button {
+      padding: 10px 20px;
+      background: white;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: bold;
+      color: black;
+      transition: 0.3s;
+    }
+
+    .tabs button.active {
+      background: black;
+      color: white;
+    }
+
+    .section {
+      display: none;
+      grid-template-columns: repeat(auto-fit, minmax(600px, 0fr));
+      gap: 20px;
+    }
+
+    .section.active {
+      display: grid;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 16px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      text-align: center;
+    }
+
+    .card img {
+      width: 100%;
+      height: 600px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .card h3 {
+      margin: 10px 0 6px;
+      font-size: 16px;
+      color: #111827;
+    }
+
+    .card p {
+      font-weight: bold;
+      color: black;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Парфюмерия</h1>
+
+  <div class="tabs">
+    <button class="tab-btn active" data-tab="male">Мужская</button>
+    <button class="tab-btn" data-tab="female">Женская</button>
+  </div>
+
+  <div id="male" class="section active">
+    <div class="card">
+      <img src="духимужские.jpg" alt="Мужской парфюм">
+      <h3>Dior Sauvage</h3>
+      <p>9 000сом</p>
+    </div>
+    <div class="card">
+      <img src="духии.jpg" alt="Мужской парфюм">
+      <h3>Bleu de Chanel</h3>
+      <p>11 500сом</p>
+    </div>
+  </div>
+
+  <div id="female" class="section">
+    <div class="card">
+      <img src="духии.jpg" alt="Женский парфюм">
+      <h3>Chanel No.5</h3>
+      <p>13 000сом</p>
+    </div>
+    <div class="card">
+      <img src="духи женские3.jpg" alt="Женский парфюм">
+      <h3>YSL Libre</h3>
+      <p>10 200сом</p>
+    </div>
+  </div>
+
+  <script>
+    const tabs = document.querySelectorAll('.tab-btn');
+    const sections = document.querySelectorAll('.section');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(btn => btn.classList.remove('active'));
+        sections.forEach(sec => sec.classList.remove('active'));
+
+        tab.classList.add('active');
+        document.getElementById(tab.dataset.tab).classList.add('active');
+      });
+    });
+  </script>
+
+</body>
+</html>
