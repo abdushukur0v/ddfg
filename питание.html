@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Питание</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: red;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color:white;
+      margin-bottom: 30px;
+    }
+
+    .tabs {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+      margin-bottom: 25px;
+    }
+
+    .tabs button {
+      padding: 10px 14px;
+      background-color: white;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: bold;
+      color: #4e342e;
+      transition: background 0.3s;
+    }
+
+    .tabs button.active {
+      background-color:black;
+      color: white;
+    }
+
+    .section {
+      display: none;
+    }
+
+    .section.active {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(600px, 0fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #fff;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .card img {
+      width: 100%;
+      height: 700px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .card h3 {
+      margin: 10px 0 5px;
+      font-size: 16px;
+      color: black;
+    }
+
+    .price {
+      color: black;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h1> Продукты питания</h1>
+
+  <div class="tabs">
+    <button class="tab-btn active" data-tab="meat">Мясо и рыба</button>
+    <button class="tab-btn" data-tab="sweets">Кондитерские</button>
+    <button class="tab-btn" data-tab="vegetables">Овощи</button>
+    <button class="tab-btn" data-tab="grains">Крупы и сахар</button>
+    <button class="tab-btn" data-tab="dairy">Молочные</button>
+    <button class="tab-btn" data-tab="ready">Готовые блюда</button>
+    <button class="tab-btn" data-tab="fruits">Фрукты</button>
+    <button class="tab-btn" data-tab="dried">Сухофрукты</button>
+    <button class="tab-btn" data-tab="bread">Хлебобулочные</button>
+    <button class="tab-btn" data-tab="berries">Ягоды</button>
+    <button class="tab-btn" data-tab="sauces">Соусы и специи</button>
+    <button class="tab-btn" data-tab="drinks">Чай, кофе, напитки</button>
+    <button class="tab-btn" data-tab="semi">Полуфабрикаты</button>
+    <button class="tab-btn" data-tab="mushrooms">Грибы</button>
+    <button class="tab-btn" data-tab="other">Другие продукты</button>
+  </div>
+
+  <div class="section active" id="meat">
+    <div class="card">
+      <img src="мясо говядина.jpg" alt="говядина">
+      <h3>Мясо говяжее</h3>
+      <p class="price">450сом/кг</p>
+    </div>
+    <div class="card">
+      <img src="мямо рыбы.jpg" alt="Лосось">
+      <h3>Филе лосося</h3>
+      <p class="price">890сом/кг</p>
+    </div>
+	<div class="card">
+      <img src="мясо2.jpeg" alt="говядина">
+      <h3>Мясо говяжее</h3>
+      <p class="price">750сом/кг</p>
+    </div>
+  </div>
+
+  <div class="section" id="sweets">
+    <div class="card">
+      <img src="Торт.jpg" alt="Торт">
+      <h3>Шоколадный торт</h3>
+      <p class="price">990сом</p>
+    </div>
+	<div class="card">
+      <img src="шоколад.jpeg" alt="Торт">
+      <h3>Шоколад</h3>
+      <p class="price">90сом</p>
+    </div>
+	<div class="card">
+      <img src="пироженное.jpeg" alt="Торт">
+      <h3>Пироженное</h3>
+      <p class="price">200сом</p>
+    </div>
+  </div>
+
+  <div class="section" id="vegetables">
+    <div class="card">
+      <img src="Огурцы.jpg" alt="Огурцы">
+      <h3>Огурцы свежие</h3>
+      <p class="price">120сом/кг</p>
+    </div>
+	 <div class="card">
+      <img src="морковь.jpeg" alt="Огурцы">
+      <h3>Морковь</h3>
+      <p class="price">50сом/кг</p>
+    </div>
+	 <div class="card">
+      <img src="лук.jpeg" alt="Огурцы">
+      <h3>Лук</h3>
+      <p class="price">20сом/кг</p>
+    </div>
+  </div>
+
+  <div class="section" id="grains">
+    <div class="card">
+      <img src="Гречка.jpg" alt="Гречка">
+      <h3>Гречневая крупа</h3>
+      <p class="price">85сом/кг</p>
+    </div>
+	<div class="card">
+      <img src="горох.jpeg" alt="Гречка">
+      <h3>Горох</h3>
+      <p class="price">105сом/кг</p>
+    </div>
+	<div class="card">
+      <img src="сахар.jpeg" alt="Гречка">
+      <h3>Сахар</h3>
+      <p class="price">80сом/кг</p>
+    </div>
+  </div>
+
+  <div class="section" id="dairy">
+    <div class="card">
+      <img src="Молоко.jpg" alt="Молоко">
+      <h3>Молоко 2.5%</h3>
+      <p class="price">65сом</p>
+    </div>
+	 <div class="card">
+      <img src="творог.jpeg" alt="Молоко">
+      <h3>Творог</h3>
+      <p class="price">85сом</p>
+    </div>
+	 <div class="card">
+      <img src="масло.jpeg" alt="Молоко">
+      <h3>Масло</h3>
+      <p class="price">45сом</p>
+    </div>
+  </div>
+
+  <div class="section" id="ready">
+    <div class="card">
+      <img src="Плов.jpg" alt="Плов">
+      <h3>Готовый плов</h3>
+      <p class="price">230сом</p>
+    </div>
+	<div class="card">
+      <img src="крылышки.jpeg" alt="Плов">
+      <h3>Крылышки</h3>
+      <p class="price">330сом</p>
+    </div>
+	<div class="card">
+      <img src="фри.jpeg" alt="Плов">
+      <h3>Картошка фри</h3>
+      <p class="price">100сом</p>
+    </div>
+  </div>
+
+  <div class="section" id="fruits">
+    <div class="card">
+      <img src="Яблоко.jpg" alt="Яблоки">
+      <h3>Яблоки</h3>
+      <p class="price">90сом/кг</p>
+    </div>
+	 <div class="card">
+      <img src="клубника.jpeg" alt="Яблоки">
+      <h3>Клубника</h3>
+      <p class="price">200сом/кг</p>
+    </div>
+	 <div class="card">
+      <img src="банан.jpeg" alt="Яблоки">
+      <h3>Банан</h3>
+      <p class="price">99сом/кг</p>
+    </div>
+  </div>
+
+  <div class="section" id="dried">
+    <div class="card">
+      <img src="хурма.jpg" alt="Курага">
+      <h3>Курага</h3>
+      <p class="price">320сом/кг</p>
+    </div>
+	<div class="card">
+      <img src="орехи.jpeg" alt="Курага">
+      <h3>Орехи</h3>
+      <p class="price">420сом/кг</p>
+    </div>
+	<div class="card">
+      <img src="семечка.jpeg" alt="Курага">
+      <h3>Семечка</h3>
+      <p class="price">120сом/кг</p>
+    </div>
+  </div>
+
+  <div class="section" id="bread">
+    <div class="card">
+      <img src="Хлеб ржаной.jpg" alt="Хлеб">
+      <h3>Ржаной хлеб</h3>
+      <p class="price">40сом</p>
+    </div>
+	<div class="card">
+      <img src="Хлеб.jpeg" alt="Хлеб">
+      <h3>Хлеб</h3>
+      <p class="price">30сом</p>
+    </div>
+	<div class="card">
+      <img src="Хлеб1.jpeg" alt="Хлеб">
+      <h3>Батон</h3>
+      <p class="price">50сом</p>
+    </div>
+  </div>
+
+  <div class="section" id="berries">
+    <div class="card">
+      <img src="ягоды.jpg" alt="Черника">
+      <h3>Черника</h3>
+      <p class="price">360сом/кг</p>
+    </div>
+	 <div class="card">
+      <img src="смородина.jpeg" alt="Черника">
+      <h3>Смородина</h3>
+      <p class="price">260сом/кг</p>
+    </div>
+	 <div class="card">
+      <img src="клубника.jpeg" alt="Черника">
+      <h3>Клубника</h3>
+      <p class="price">160сом/кг</p>
+    </div>
+  </div>
+
+  <div class="section" id="sauces">
+    <div class="card">
+      <img src="Кетчуп.jpg" alt="Кетчуп">
+      <h3>Кетчуп острый</h3>
+      <p class="price">95сом</p>
+    </div>
+	 <div class="card">
+      <img src="соус.jpeg" alt="Кетчуп">
+      <h3>Соус </h3>
+      <p class="price">15сом</p>
+    </div>
+	 <div class="card">
+      <img src="уксус.jpeg" alt="Кетчуп">
+      <h3>Уксус</h3>
+      <p class="price">35сом</p>
+    </div>
+  </div>
+
+  <div class="section" id="drinks">
+    <div class="card">
+      <img src="зеленый Чай.jpg" alt="Чай">
+      <h3>Зеленый чай</h3>
+      <p class="price">70сом</p>
+    </div>
+	<div class="card">
+      <img src="пепси.jpeg" alt="Чай">
+      <h3>Пепси</h3>
+      <p class="price">150сом</p>
+    </div>
+	<div class="card">
+      <img src="фанта.jpeg" alt="Чай">
+      <h3>Фанта</h3>
+      <p class="price">120сом</p>
+    </div>
+	
+  </div>
+
+  <div class="section" id="semi">
+    <div class="card">
+      <img src="Пельмени.jpg" alt="Пельмени">
+      <h3>Пельмени с говядиной</h3>
+      <p class="price">210сом</p>
+    </div>
+	 <div class="card">
+      <img src="манты.jpeg" alt="Пельмени">
+      <h3>Манты</h3>
+      <p class="price">310сом</p>
+    </div>
+	 <div class="card">
+      <img src="блины.jpeg" alt="Пельмени">
+      <h3>Блины</h3>
+      <p class="price">160сом</p>
+    </div>
+  </div>
+
+  <div class="section" id="mushrooms">
+    <div class="card">
+      <img src="грибы.jpg" alt="Шампиньоны">
+      <h3>Шампиньоны</h3>
+      <p class="price">130сом/кг</p>
+    </div>
+	 <div class="card">
+      <img src="грибы.jpeg" alt="Шампиньоны">
+      <h3>Грибы</h3>
+      <p class="price">110сом/кг</p>
+    </div>
+	 <div class="card">
+      <img src="грибы1.jpeg" alt="Шампиньоны">
+      <h3>Грибы</h3>
+      <p class="price">180сом/кг</p>
+    </div>
+  </div>
+
+  <div class="section" id="other">
+    <div class="card">
+      <img src="суповой набор.jpg" alt="Продукт">
+      <h3>Суповой набор</h3>
+      <p class="price">170сом</p>
+    </div>
+	<div class="card">
+      <img src="омлет.jpeg" alt="Продукт">
+      <h3>Омлет</h3>
+      <p class="price">170сом</p>
+    </div>
+	<div class="card">
+      <img src="картошка.jpeg" alt="Продукт">
+      <h3>Блюдо из картошки</h3>
+      <p class="price">190сом</p>
+    </div>
+  </div>
+
+  <script>
+    const tabs = document.querySelectorAll('.tab-btn');
+    const sections = document.querySelectorAll('.section');
+
+    tabs.forEach(btn => {
+      btn.addEventListener('click', () => {
+        tabs.forEach(b => b.classList.remove('active'));
+        sections.forEach(s => s.classList.remove('active'));
+
+        btn.classList.add('active');
+        document.getElementById(btn.dataset.tab).classList.add('active');
+      });
+    });
+  </script>
+
+</body>
+</html>
