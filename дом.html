@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Товары для дома</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: red;
+    }
+
+    h1 {
+      text-align: center;
+      color: white;
+      margin-bottom: 25px;
+    }
+
+    .tabs {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 25px;
+    }
+
+    .tabs button {
+      padding: 10px 15px;
+      border: none;
+      background-color: white;
+      color: black;
+      border-radius: 20px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .tabs button.active {
+      background-color: black;
+      color: white;
+    }
+
+    .section {
+      display: none;
+    }
+
+    .section.active {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(600px, 0fr));
+      gap: 20px;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.07);
+      overflow: hidden;
+      padding: 15px;
+      text-align: center;
+    }
+
+    .card img {
+      width: 100%;
+      height: 800px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .card h3 {
+      font-size: 16px;
+      margin: 10px 0 5px;
+      color: black;
+    }
+
+    .price {
+      color: black;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h1> Товары для дома</h1>
+
+  <div class="tabs">
+    <button class="tab-btn active" data-tab="furniture">Мебель</button>
+    <button class="tab-btn" data-tab="garden">Дом и сад</button>
+    <button class="tab-btn" data-tab="repair">Ремонт</button>
+    <button class="tab-btn" data-tab="carpets">Ковры</button>
+    <button class="tab-btn" data-tab="decor">Декор</button>
+    <button class="tab-btn" data-tab="textile">Текстиль</button>
+    <button class="tab-btn" data-tab="lighting">Освещение</button>
+    <button class="tab-btn" data-tab="kitchen">Кухня</button>
+    <button class="tab-btn" data-tab="cleaning">Хозтовары</button>
+    <button class="tab-btn" data-tab="stationery">Канцтовары</button>
+    <button class="tab-btn" data-tab="other">Другое</button>
+  </div>
+
+  <div class="section active" id="furniture">
+    <div class="card">
+      <img src="Диван угловой.jpg" alt="Диван">
+      <h3>Угловой диван</h3>
+      <p class="price">28 990сом</p>
+    </div>
+    <div class="card">
+      <img src="Стол.jpg" alt="Стол">
+      <h3>Обеденный стол</h3>
+      <p class="price">8 750сом</p>
+    </div>
+	<div class="card">
+      <img src="тумбочка.jpeg" alt="Стол">
+      <h3>Тумбочка</h3>
+      <p class="price">10 750сом</p>
+    </div>
+  </div>
+
+  <div class="section" id="garden">
+    <div class="card">
+      <img src="Грабли.jpg" alt="Грабли">
+      <h3>Грабли садовые</h3>
+      <p class="price">520сом</p>
+    </div>
+	<div class="card">
+      <img src="шланга.jpeg" alt="Грабли">
+      <h3>Шланга</h3>
+      <p class="price">220сом</p>
+    </div>
+	<div class="card">
+      <img src="мясорубка.jpeg" alt="Грабли">
+      <h3>Мясорубка</h3>
+      <p class="price">3 520сом</p>
+    </div>
+  </div>
+
+  <div class="section" id="repair">
+    <div class="card">
+      <img src="Дрель.jpg" alt="Дрель">
+      <h3>Дрель Bosch</h3>
+      <p class="price">3 490сом</p>
+    </div>
+	<div class="card">
+      <img src="Перфоратор.jpeg" alt="Дрель">
+      <h3>Перфоратор</h3>
+      <p class="price">5 490сом</p>
+    </div>
+	<div class="card">
+      <img src="набор ключей.jpeg" alt="Дрель">
+      <h3>Набор ключей</h3>
+      <p class="price">1 490сом</p>
+    </div>
+  </div>
+
+  <div class="section" id="carpets">
+    <div class="card">
+      <img src="Ковер.jpg" alt="Ковер">
+      <h3>Ковер 200x300 см</h3>
+      <p class="price">5 990сом</p>
+    </div>
+	<div class="card">
+      <img src="Коврик утка.jpeg" alt="Ковер">
+      <h3>Ковер </h3>
+      <p class="price">3 990сом</p>
+    </div>
+	<div class="card">
+      <img src="Коврик уно.jpeg" alt="Ковер">
+      <h3>Ковер</h3>
+      <p class="price">2 990сом</p>
+    </div>
+  </div>
+
+  <div class="section" id="decor">
+    <div class="card">
+      <img src="Картина стенная.jpg" alt="Картина">
+      <h3>Настенная картина</h3>
+      <p class="price">1 290сом</p>
+    </div>
+	 <div class="card">
+      <img src="ваза2.jpeg" alt="Картина">
+      <h3>Ваза</h3>
+      <p class="price">590сом</p>
+    </div>
+	 <div class="card">
+      <img src="светильник2.jpeg" alt="Картина">
+      <h3>Светильник</h3>
+      <p class="price">1 000сом</p>
+    </div>
+  </div>
+
+  <div class="section" id="textile">
+    <div class="card">
+      <img src="Плед.jpg" alt="Плед">
+      <h3>Мягкий плед</h3>
+      <p class="price">890сом</p>
+    </div>
+	<div class="card">
+      <img src="Полотенце.jpeg" alt="Плед">
+      <h3>Полотенце</h3>
+      <p class="price">290сом</p>
+    </div>
+	<div class="card">
+      <img src="Подушка.jpeg" alt="Плед">
+      <h3>Подушки</h3>
+      <p class="price">1890сом</p>
+    </div>
+  </div>
+
+  <div class="section" id="lighting">
+    <div class="card">
+      <img src="Люстра.jpg" alt="Люстра">
+      <h3>Люстра потолочная</h3>
+      <p class="price">4 500сом</p>
+    </div>
+	<div class="card">
+      <img src="светильник3.jpeg" alt="Люстра">
+      <h3>Светильник</h3>
+      <p class="price">1 500сом</p>
+    </div>
+	<div class="card">
+      <img src="Люстра2.jpeg" alt="Люстра">
+      <h3>Люстра потолочная</h3>
+      <p class="price">7 000сом</p>
+    </div>
+  </div>
+
+  <div class="section" id="kitchen">
+    <div class="card">
+      <img src="Кастрюли.jpg" alt="Кастрюля">
+      <h3>Набор кастрюль</h3>
+      <p class="price">2 490сом</p>
+    </div>
+	<div class="card">
+      <img src="ножи2.jpeg" alt="Кастрюля">
+      <h3>Набор ножей</h3>
+      <p class="price">1 490сом</p>
+    </div>
+	<div class="card">
+      <img src="набор для кухни.jpeg" alt="Кастрюля">
+      <h3>Набор для готовки</h3>
+      <p class="price">2 990сом</p>
+    </div>
+  </div>
+
+  <div class="section" id="cleaning">
+    <div class="card">
+      <img src="Швабра.jpg" alt="Швабра">
+      <h3>Швабра с ведром</h3>
+      <p class="price">1 150сом</p>
+    </div>
+	
+	<div class="card">
+      <img src="перчатки1.jpeg" alt="Швабра">
+      <h3>Перчатка</h3>
+      <p class="price">50сом</p>
+    </div>
+
+	<div class="card">
+      <img src="моюшие средства.jpeg" alt="Швабра">
+      <h3>Моюшие средства</h3>
+      <p class="price"> 150сом</p>
+    </div>
+
+	<div class="card">
+      <img src="тряпка.jpeg" alt="Швабра">
+      <h3>Тряпка</h3>
+      <p class="price"> 100сом</p>
+    </div>
+  </div>
+
+  <div class="section" id="stationery">
+    <div class="card">
+      <img src="Ручки.jpg" alt="Ручки">
+      <h3>Набор ручек (10 шт)</h3>
+      <p class="price">290сом</p>
+    </div>
+	<div class="card">
+      <img src="пенал.jpeg" alt="Ручки">
+      <h3>Пенал</h3>
+      <p class="price">200сом</p>
+    </div>
+	<div class="card">
+      <img src="тетради.jpeg" alt="Ручки">
+      <h3>Набор тетрадей (10 шт)</h3>
+      <p class="price">590сом</p>
+    </div>
+	<div class="card">
+      <img src="карандаши.jpeg" alt="Ручки">
+      <h3>Набор карандашей (10 шт)</h3>
+      <p class="price">150сом</p>
+    </div>
+  </div>
+
+  <div class="section" id="other">
+    <div class="card">
+      <img src="Увлажнитель.jpg" alt="Увлажнитель">
+      <h3>Увлажнитель воздуха</h3>
+      <p class="price">3 200сом</p>
+    </div>
+  </div>
+
+  <script>
+    const tabs = document.querySelectorAll('.tab-btn');
+    const sections = document.querySelectorAll('.section');
+
+    tabs.forEach(btn => {
+      btn.addEventListener('click', () => {
+        tabs.forEach(b => b.classList.remove('active'));
+        sections.forEach(s => s.classList.remove('active'));
+
+        btn.classList.add('active');
+        document.getElementById(btn.dataset.tab).classList.add('active');
+      });
+    });
+  </script>
+
+</body>
+</html>
