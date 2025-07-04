@@ -237,7 +237,129 @@
       color: red;
       text-decoration: none;
     }
-	
+	 font-family: Arial, sans-serif;
+      background-color: #f3f4f6;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .contact-card {
+      background-color: white;
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      text-align: center;
+      max-width: 400px;
+      width: 100%;
+    }
+    h1 {
+      margin-bottom: 1rem;
+    }
+    .contact-info {
+      margin: 1rem 0;
+      font-size: 1.2rem;
+    }
+    .contact-buttons a {
+      display: block;
+      margin: 0.5rem 0;
+      padding: 0.75rem;
+      border-radius: 0.5rem;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+    }
+    .whatsapp {
+      background-color: #b0071a	;
+    }
+    .telegram {
+      background-color:#b0071a;
+    }
+	 #registerSection {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+
+  #registerSection h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+  }
+
+  #registerForm input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    transition: border-color 0.2s ease;
+  }
+
+  #registerForm input:focus {
+    border-color: #4CAF50;
+    outline: none;
+  }
+
+  #registerForm button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+  }
+
+  #registerForm button:hover {
+    background-color: #45a049;
+  }
+
+  .link {
+    display: inline-block;
+    margin-top: 15px;
+    font-size: 14px;
+    color: #4CAF50;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+  .link:hover {
+    color: #388e3c;
+  }
+
+  .message {
+    margin-top: 10px;
+    font-size: 14px;
+    color: red;
+  }
+
+  @media (max-width: 480px) {
+    #registerSection {
+      padding: 20px;
+    }
+
+    #registerSection h2 {
+      font-size: 20px;
+    }
+
+    #registerForm input,
+    #registerForm button {
+      font-size: 15px;
+    }
+  }
   </style>
 </head>
 <script src="https://js.stripe.com/v3/"></script>
@@ -410,6 +532,16 @@
   <p id="payment-result"></p>
 </form>
     </div>
+	 <div class="contact-card">
+    <h1>Свяжитесь с нами</h1>
+    <div class="contact-info">
+      📞 Телефон: <strong>+996 555 50-61-03</strong>
+    </div>
+    <div class="contact-buttons">
+      <a href="https://wa.me/996555506103" class="whatsapp" target="_blank">Написать в WhatsApp</a>
+      <a href="https://t.me/abdushukur0v" class="telegram" target="_blank">Написать в Telegram</a>
+    </div>
+  </div>
 	
   </section>
   
